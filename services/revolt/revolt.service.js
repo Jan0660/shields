@@ -1,9 +1,11 @@
 import Joi from 'joi'
+import { nonNegativeInteger } from '../validators.js'
 import { BaseJsonService } from '../index.js'
 
 const schema = Joi.object({
   server_name: Joi.string(),
   channel_name: Joi.string(),
+  member_count: nonNegativeInteger,
 }).required()
 
 export default class RevoltServerInvite extends BaseJsonService {
@@ -32,10 +34,10 @@ export default class RevoltServerInvite extends BaseJsonService {
     namedLogo: 'revolt',
   }
 
-  static render({ inviteId, serverName, channelName }) {
+  static render({ inviteId, serverName, channelName, memberCount }) {
     return {
-      label: `Join ${serverName} on Revolt!`,
-      message: channelName,
+      label: `${serverName} #${channelName}`,
+      message: memberCount,
       color: 'brightgreen',
       link: [`https://app.revolt.chat/invites/${inviteId}`],
     }
@@ -49,12 +51,16 @@ export default class RevoltServerInvite extends BaseJsonService {
   }
 
   async handle({ inviteId }) {
-    const { server_name: serverName, channel_name: channelName } =
-      await this.fetch({ inviteId })
+    const {
+      server_name: serverName,
+      channel_name: channelName,
+      member_count: memberCount,
+    } = await this.fetch({ inviteId })
     return this.constructor.render({
       inviteId,
       serverName,
       channelName,
+      memberCount,
     })
   }
 }
