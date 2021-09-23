@@ -1,3 +1,15 @@
+# shields.revolt.gay
+
+A shields.io fork with Revolt invites.
+
+A hosted instance is available at `shields.revolt.gay`.
+
+```
+https://shields.revolt.gay/revolt/invite/Testers?logo=revolt
+```
+
+![shield preview](https://shields.revolt.gay/revolt/invite/Testers?logo=revolt)
+
 <p align="center">
     <img src="https://raw.githubusercontent.com/badges/shields/master/readme-logo.svg?sanitize=true"
         height="130">
