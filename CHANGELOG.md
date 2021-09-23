@@ -4,6 +4,36 @@ Note: this changelog is for the shields.io server. The changelog for the badge-m
 
 ---
 
+## server-2021-09-01
+
+- use multi-stage build to reduce size of docker images [#6938](https://github.com/badges/shields/issues/6938)
+- remove disableStrictSsl param from [jenkins] [#6887](https://github.com/badges/shields/issues/6887)
+- refactor(GitHubCommitActivity): switch to v4/GraphQL API [#6959](https://github.com/badges/shields/issues/6959)
+- feat: add freecodecamp badge [#6958](https://github.com/badges/shields/issues/6958)
+- use the right version of NPM in docker build [#6941](https://github.com/badges/shields/issues/6941)
+- [TwitchExtensionVersion] New badge [#6900](https://github.com/badges/shields/issues/6900)
+- enforce strict SSL checking for [coverity] [#6886](https://github.com/badges/shields/issues/6886)
+- Update self hosting docs [#6877](https://github.com/badges/shields/issues/6877)
+- Support optionalDependencies in [GithubPackageJson] [#6749](https://github.com/badges/shields/issues/6749)
+- Dependency updates
+
+## server-2021-08-01
+
+- use v5 API for [AUR] badges [#6836](https://github.com/badges/shields/issues/6836)
+- [Sonar] Fix invalid fetch query to sonarqube >=6.6 [#6636](https://github.com/badges/shields/issues/6636)
+- Delegate discord logo to simple-icons, which matches the current branding [#6764](https://github.com/badges/shields/issues/6764)
+- Re-apply 'Migrate request to got (part 1)' [#6755](https://github.com/badges/shields/issues/6755)
+- Delete old deprecated badges [#6756](https://github.com/badges/shields/issues/6756)
+- Replace opn-cli with open-cli [#6747](https://github.com/badges/shields/issues/6747)
+- Verify that Node 14 is installed in development [#6748](https://github.com/badges/shields/issues/6748)
+- Migrate from CommonJS to ESM [#6651](https://github.com/badges/shields/issues/6651)
+- Add Wikiapiary Extension Badge [WikiapiaryInstalls] [#6678](https://github.com/badges/shields/issues/6678)
+- deprecate [beerpay] [#6708](https://github.com/badges/shields/issues/6708)
+- deprecate [microbadger] [#6709](https://github.com/badges/shields/issues/6709)
+- [npmsioscore] Support npm score [#6630](https://github.com/badges/shields/issues/6630)
+- Add [Weblate] badges [#6677](https://github.com/badges/shields/issues/6677)
+- Dependency updates
+
 ## server-2021-07-01
 
 - improve [MavenCentral], [MavenMetadata], and [GradlePluginPortal] [#6628](https://github.com/badges/shields/issues/6628)

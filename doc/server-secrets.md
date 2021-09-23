@@ -147,6 +147,15 @@ These settings are used by shields.io for GitHub OAuth app authorization
 but will not be necessary for most self-hosted installations. See
 [production-hosting.md](./production-hosting.md).
 
+### GitLab
+
+- `GITLAB_ORIGINS` (yml: `public.services.gitlab.authorizedOrigins`)
+- `GITLAB_TOKEN` (yml: `private.gitlab_token`)
+
+A GitLab [Personal Access Token][gitlab-pat] is required for accessing private content. If you need a GitLab token for your self-hosted Shields server then we recommend limiting the scopes to the minimal set necessary for the badges you are using.
+
+[gitlab-pat]: https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html
+
 ### Jenkins CI
 
 - `JENKINS_ORIGINS` (yml: `public.services.jenkins.authorizedOrigins`)
@@ -218,6 +227,21 @@ access to your private nexus repositories.
 
 Register an application in the [Twitch developer console](https://dev.twitch.tv/console)
 in order to obtain a client id and a client secret for making Twitch API calls.
+
+### Weblate
+
+- `WEBLATE_ORIGINS` (yml: `public.services.weblate.authorizedOrigins`)
+- `WEBLATE_API_KEY` (yml: `private.weblate_api_key`)
+
+By default Weblate throttles [unauthenticated request][weblate authentication]
+to only 100 requests per day, after this you will need an API key or else
+badges will stop working.
+
+You can find your Weblate API key in your profile under
+["API access"][weblate api key location].
+
+[weblate authentication]: https://docs.weblate.org/en/latest/api.html#authentication-and-generic-parameters
+[weblate api key location]: https://hosted.weblate.org/accounts/profile/#api
 
 ### Wheelmap
 
