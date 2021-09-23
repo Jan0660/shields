@@ -125,6 +125,7 @@ const publicConfigSchema = Joi.object({
         intervalSeconds: Joi.number().integer().min(1).required(),
       },
     },
+    gitlab: defaultService,
     jira: defaultService,
     jenkins: Joi.object({
       authorizedOrigins: origins,
@@ -135,6 +136,7 @@ const publicConfigSchema = Joi.object({
     npm: defaultService,
     sonar: defaultService,
     teamcity: defaultService,
+    weblate: defaultService,
     trace: Joi.boolean().required(),
   }).required(),
   cacheHeaders: { defaultCacheLengthSeconds: nonNegativeInteger },
@@ -160,6 +162,7 @@ const privateConfigSchema = Joi.object({
   gh_client_id: Joi.string(),
   gh_client_secret: Joi.string(),
   gh_token: Joi.string(),
+  gitlab_token: Joi.string(),
   jenkins_user: Joi.string(),
   jenkins_pass: Joi.string(),
   jira_user: Joi.string(),
@@ -182,6 +185,7 @@ const privateConfigSchema = Joi.object({
   wheelmap_token: Joi.string(),
   influx_username: Joi.string(),
   influx_password: Joi.string(),
+  weblate_api_key: Joi.string(),
   youtube_api_key: Joi.string(),
 }).required()
 const privateMetricsInfluxConfigSchema = privateConfigSchema.append({
