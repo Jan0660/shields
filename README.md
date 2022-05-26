@@ -6,7 +6,7 @@ A hosted instance is available at `shields.jan0660.dev`.
 https://shields.jan0660.dev/revolt/invite/Testers?logo=revolt
 ```
 
-![shield preview](https://shields.revolt.gay/revolt/invite/Testers?logo=revolt)
+![shield preview](https://shields.jan0660.dev/revolt/invite/Testers?logo=revolt)
 
 <p align="center">
     <img src="https://raw.githubusercontent.com/badges/shields/master/readme-logo.svg?sanitize=true"
