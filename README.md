@@ -1,11 +1,9 @@
-# shields.revolt.gay
-
 A shields.io fork with Revolt invites.
 
-A hosted instance is available at `shields.revolt.gay`.
+A hosted instance is available at `shields.jan0660.dev`.
 
 ```
-https://shields.revolt.gay/revolt/invite/Testers?logo=revolt
+https://shields.jan0660.dev/revolt/invite/Testers?logo=revolt
 ```
 
 ![shield preview](https://shields.revolt.gay/revolt/invite/Testers?logo=revolt)
